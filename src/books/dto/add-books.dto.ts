@@ -2,13 +2,13 @@ import { IsNotEmpty, IsNumberString, IsOptional } from 'class-validator';
 
 export class AddBookDto {
   @IsNotEmpty()
-  title: string;
+  readonly title: string;
   @IsOptional()
-  status: string;
+  readonly status: string;
   @IsNotEmpty()
-  description: string;
+  readonly description: string;
   @IsNotEmpty()
-  author: string;
+  readonly author: string;
   @IsNumberString()
-  pages: number;
+  readonly pages: number;
 }
